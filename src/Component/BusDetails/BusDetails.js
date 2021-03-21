@@ -21,11 +21,7 @@ const BusDetails = () => {
     return (
         <div >
 
-            {!search ?
-                //   <div>
-                //       {/* <button onClick={()=>setSearch(true)}>start</button> */}
-                //       {/* <input type="submit" value="search"/> */}
-                //   </div>
+            {!search ?     
                 <div >
                     <Header></Header>
 
@@ -87,23 +83,11 @@ const BusDetails = () => {
 
                                                 <button type="button" class="btn2 mt-3  mb-3" onClick={() => setSearch(true)} > Search </button>
 
-
                                             </div>
-
                                         </div>
-
                                     </form>
-
                                 </div>
-
-
-
                             </div>
-
-
-
-
-
                         </div>
 
                         <div className="col-md-5 mt-3">
@@ -116,24 +100,10 @@ const BusDetails = () => {
 
                 </div>
 
-
-
-
-
                 :
 
-
-
                 <Destination></Destination>
-
-
-
-
-
             }
-
-
-
         </div>
     );
 };
