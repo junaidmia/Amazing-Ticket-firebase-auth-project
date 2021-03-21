@@ -24,6 +24,7 @@ const Login = () => {
 
 
                     // Email Password sign in start
+                    
 const [newUser,setNewUser] = useState(false)
 
     const [user, setUser] = useState({
@@ -33,7 +34,6 @@ const [newUser,setNewUser] = useState(false)
         password: '',
         photo: '',
     })
-
 
     const handleBlur = (e) => {
         let isFieldValid = true;
@@ -70,7 +70,7 @@ const [newUser,setNewUser] = useState(false)
 
                 })
                 .catch((error) => {
-                    // var errorCode = error.code;
+                    var errorCode = error.code;
                     const newUserInfo = { ...user };
                     newUserInfo.error = error.message
                     newUserInfo.success = false;
@@ -99,13 +99,11 @@ const [newUser,setNewUser] = useState(false)
     // history.replace(from)
   });
 
-        }
-
-
+  }
         e.preventDefault();
     }
 
-                                     //  email password login end 
+ //  email password login end 
 
 
 
@@ -178,7 +176,7 @@ const [newUser,setNewUser] = useState(false)
                 // ...
             });
     }
-    // Facebook login End
+               // Facebook login End
 
 
 
@@ -193,7 +191,7 @@ const [newUser,setNewUser] = useState(false)
                     </div>
                     <div className="col-lg-7 px-5 pt-3">
                         <div className="row">
-                            <div className="col-md-6">
+                            <div className="col-md-6 mt-5">
                                 <h4>Sign in to your account</h4>
                                 <form>
                                     <div className="form-row">
@@ -224,21 +222,19 @@ const [newUser,setNewUser] = useState(false)
                                             {user.success && <p style={{ color: 'green' }}>user {newUser ?'created' : 'logged in'} successfully</p>}
                                         </div>
                                        
-                                        <span>Don't have account?
+                                        <span> {newUser ?'Already have an account? ': "Don't have account?"} 
                                        {/* <button class="text-danger btn-link border-0 bg-light" name="newUser" onClick={()=>setNewUser(!newUser)}> Sign Up</button> */}
 
-                                       <input  type="text" name="newUser" onClick={()=>setNewUser(!newUser)}/>
-                                       
-
-                                            </span> 
-                                              {/* <button class="text-danger btn-link border-0 bg-light" name="newUser" onClick={()=>setNewUser(!newUser)}> Sign Up</button> */}
+                                       <span class="text-danger btn-link border-0 bg-light ms-3" name="newUser" onClick={()=>setNewUser(!newUser)}>{newUser ?'Login': 'Sign up'}</span>
+                                       </span>
+                                                                             
                                     </div>
 
                                 </form>
 
                             </div>
 
-                            <div className="col-md-6">
+                            <div className="col-md-6 mt-3">
                                 <form>
 
 
@@ -246,14 +242,14 @@ const [newUser,setNewUser] = useState(false)
 
                                     <div className="form-row">
                                         <div className="col-lg-12">
-                                            <button type="button" onClick={handleGoogleSignIn} class="googleBtn  mb-3"> <img src={GoogleLogo} style={{ width: '40px' }} alt="" />  Google {loggedInUser.name}</button>
+                                            <button type="button" onClick={handleGoogleSignIn} class="googleBtn  mb-3"> <img src={GoogleLogo} style={{ width: '30px' }} alt="" />  Google {loggedInUser.name}</button>
                                         </div>
                                         <h5 className="text-center" > or </h5>
 
                                     </div>
                                     <div className="form-row">
                                         <div className="col-lg-12">
-                                            <button type="button" onClick={handleFacebookSignIn} class="fbBtn  mb-3" >  <img src={fbLogo} style={{ width: '50px' }} alt="" />  Facebook</button>
+                                            <button type="button" onClick={handleFacebookSignIn} class="fbBtn  mb-3" >  <img src={fbLogo} style={{ width: '40px' }} alt="" />  Facebook</button>
                                         </div>
 
                                     </div>
@@ -271,6 +267,11 @@ const [newUser,setNewUser] = useState(false)
                     </div>
                 </div>
             </div>
+            <section>
+            <div className="mb-5 text-center">
+             <p>Copyright 2021- by Junaid <span>&#128512;</span> All Rights Reserved.</p>
+            </div>
+            </section>
         </section>
     );
 };

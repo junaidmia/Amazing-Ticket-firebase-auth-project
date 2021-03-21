@@ -7,6 +7,7 @@ import { UserContext } from '../../App';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const {name}= loggedInUser
    
     return (
         <div>            
@@ -33,13 +34,12 @@ const Header = () => {
                             <li class="nav-item ">
                                 <a class="nav-link ms-5 fw-bolder" href="..">Contact</a>
                             </li>
-                            <Link to="/busDetails" style={{marginLeft:'35%'}}> <a href="..." class="btn btn-outline-success" >Login </a> </Link>
+                            <Link to="/busDetails" style={{marginLeft:'35%'}}> <a href="..." class="btn btn-outline-success" > Login </a> </Link>
+                            
                                                                                                                           
                         </ul>
-                        <p class=" fw-bolder px-5">{loggedInUser.name}</p>
-                        <form class="">
-                           
-                        </form>
+                        <p class=" fw-bolder px-5">{name}</p>
+                       
                     </div>
                 </div>
             </nav>
