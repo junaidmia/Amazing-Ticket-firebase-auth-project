@@ -1,0 +1,33 @@
+[{
+    
+"id":1,
+"title":"Ac Bus",
+"price":740,
+"img":"https://static.vecteezy.com/system/resources/thumbnails/000/494/877/small/big_tour_bus_02.jpg",
+"capacity":30
+ 
+},{
+
+"id":2,
+"title":"Double Decker",
+"price":910,
+"img":"https://images.all-free-download.com/images/graphicthumb/double_decker_bus_556723.jpg",
+"capacity":25
+
+},{
+
+"id":3,
+"title":"Non Ac Bus",
+"price":370,
+"img":"https://img.freepik.com/free-vector/red-bus-illustration_173474-60.jpg?size=626&ext=jpg",
+"capacity":30
+
+},{  
+
+"id":4,
+"title":"Local Bus",
+"price":160,
+"img":"https://cdn.dribbble.com/users/1732422/screenshots/3599542/california_dream_800x600.gif",
+"capacity":50
+
+}]

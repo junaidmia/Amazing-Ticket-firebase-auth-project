@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.bg-img{
+  background: url ('https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-creative-synthetic-atmospheric-road-traffic-background-image_262594.jpg')
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
