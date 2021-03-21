@@ -35,8 +35,7 @@ const Header = () => {
                                 <a class="nav-link ms-5 fw-bolder" href="..">Contact</a>
                             </li>
                             <Link to="/busDetails" style={{marginLeft:'35%'}}> <a href="..." class="btn btn-outline-success" > Login </a> </Link>
-                            
-                                                                                                                          
+                                                                                                                                                    
                         </ul>
                         <p class=" fw-bolder px-5">{name}</p>
                        

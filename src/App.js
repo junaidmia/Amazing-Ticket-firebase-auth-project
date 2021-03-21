@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import NoMatch from './Component/NoMatch/NoMatch';
 import BusDetails from './Component/BusDetails/BusDetails';

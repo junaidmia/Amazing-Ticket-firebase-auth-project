@@ -17,7 +17,6 @@ const BusDetails = () => {
         borderRadius: '10px'
     }
 
-
     return (
         <div >
 

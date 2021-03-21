@@ -24,7 +24,7 @@ const Login = () => {
 
 
                     // Email Password sign in start
-                    
+
 const [newUser,setNewUser] = useState(false)
 
     const [user, setUser] = useState({
@@ -142,8 +142,6 @@ const [newUser,setNewUser] = useState(false)
 
 
 
-
-
     // facebook log in start
 
     const handleFacebookSignIn = () => {
@@ -253,16 +251,10 @@ const [newUser,setNewUser] = useState(false)
                                         </div>
 
                                     </div>
-
-
                                 </form>
 
                             </div>
                         </div>
-
-
-
-
 
                     </div>
                 </div>
