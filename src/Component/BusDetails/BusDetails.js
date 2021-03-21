@@ -10,6 +10,18 @@ const BusDetails = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
 
     const [search, setSearch] = useState(false);
+    const [destination1, setDestination1] = useState("")
+    const [destination2, setDestination2] = useState("")
+
+
+    const handleChange1 =(e)=>{
+      setDestination1(e.target.value)
+
+    }
+    const handleChange2 =(e)=>{
+      setDestination2(e.target.value)
+
+    }
 
     const style = {
         width: '120px',
@@ -53,18 +65,18 @@ const BusDetails = () => {
                                 <div className="col-md-5 container bg-light ms- rounded">
 
                                     <h5 className="text-center p-3">Create your destination</h5>
-                                    <form className="justify-content-cente">
+                                    <form className="justify-content-center">
                                         <div className="form-row">
                                             <div className="col-lg-12">
                                                 <label for="from">From</label>
-                                                <input type="text" name="from" placeholder="From" class="form-control  my-3 p-2" />
+                                                <input onChange={handleChange1} type="text" name="from" placeholder="From" class="form-control  my-3 p-2" />
                                             </div>
 
                                         </div>
                                         <div className="form-row">
                                             <div className="col-lg-12">
                                                 <label for="to" >To</label>
-                                                <input type="text" name="to" placeholder="Your Destination" class="form-control my-3 p-2" />
+                                                <input onChange={handleChange2} type="text" name="to" placeholder="Your Destination" class="form-control my-3 p-2" />
                                             </div>
 
                                         </div>
@@ -101,7 +113,7 @@ const BusDetails = () => {
 
                 :
 
-                <Destination></Destination>
+                <Destination mainDestination1={destination1} mainDestination2={destination2}></Destination>
             }
         </div>
     );

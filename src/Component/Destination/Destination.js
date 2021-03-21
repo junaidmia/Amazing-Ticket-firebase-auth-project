@@ -11,9 +11,13 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import MapG from '../Map/MapG';
 
 
-const BusDetails = () => {
+const BusDetails = (props) => {
     // const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     let { busId } = useParams();
+
+const {mainDestination1}=props
+const {mainDestination2}=props
+    console.log(props)
 
     const details = busDetail.find(bus => bus.id == busId);
     console.log(details)
@@ -43,9 +47,9 @@ const BusDetails = () => {
                                 <img src={img1} style={style} alt="" />
                             </div>
                             <div className="col-md-7">
-                                <h3>Dhaka</h3>
+                                <h3>{mainDestination1}</h3>
                                 <span>to</span>
-                                <h3>Khulna</h3>
+                                <h3>{mainDestination2}</h3>
                             </div>
                         </div>
 
